@@ -72,7 +72,7 @@ async function main() {
   const publicWalletAddressMintReceive = "{{ANY_WALLET_PUBLIC_ADDRESS}}";
 
   const mintTx = await deployedContract.mint(
-    publicWalletAddress
+    publicWalletAddressMintReceive
     //{ gasLimit: gasEstimate }
   );
 
