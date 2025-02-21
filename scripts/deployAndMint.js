@@ -7,12 +7,11 @@ const contractAbi = require("../artifacts/contracts/MyNft.sol/MyNft.json");
 
 async function main() {
   //RPC and nodeAddress
-  const yourRPCNode = "http://146.148.73.191";
-  const nodeAddress = "0xa6e41a7fa1aafc4322118a90796085b3f60a0907";
+  const yourRPCNode = "{{YOUR_RPC_ADDRESS_IP}}";
+  const nodeAddress = "{{YOUR_NODE_ADDRESS}}";
 
   //Wallet private key
-  const privateKey =
-    "0x40399e8f46d96f02350021125d012eed9b4fe9983fd2a04886c30118a6be47b0";
+  const privateKey = "{{YOUR_PRIVATE_KEY}}}";
 
   //Mainnet
   const trustedForwarder = "0xEAA5420AF59305c5ecacCB38fcDe70198001d147";
@@ -45,8 +44,10 @@ async function main() {
 
   console.log(`Deploying ${contractAbi.contractName}...`);
 
+  const contractOwner = "{{YOUR_WALLET_PUBLIC_ADDRESS}}";
+
   const contract = await contractFactory.deploy(
-    "0x98F34d67411ad0dFcbc11230cd1D88400c6441Ad",
+    contractOwner,
     trustedForwarder
   );
   const receipt = await contract.deploymentTransaction()?.wait();
@@ -68,7 +69,7 @@ async function main() {
   //const gasEstimate = 500000;
 
   //public Wallet address
-  const publicWalletAddress = "0x98F34d67411ad0dFcbc11230cd1D88400c6441Ad";
+  const publicWalletAddressMintReceive = "{{ANY_WALLET_PUBLIC_ADDRESS}}";
 
   const mintTx = await deployedContract.mint(
     publicWalletAddress

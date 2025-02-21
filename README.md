@@ -20,21 +20,34 @@
    ```
 
 3. Compile the smart contracts:
+
    ```sh
-   npm install --save-dev hardhat
+   npx hardhat compile
    ```
+
+4. Update the deployment script deployAndMint.js with the required variables:
+
+```sh
+const yourRPCNode = "{{YOUR_RPC_ADDRESS_IP}}";
+const nodeAddress = "{{YOUR_NODE_ADDRESS}}";
+const privateKey = "{{YOUR_PRIVATE_KEY}}";
+const contractOwner = "{{YOUR_WALLET_PUBLIC_ADDRESS}}";
+const publicWalletAddressMintReceive = "{{ANY_WALLET_PUBLIC_ADDRESS}}";
+```
+
+Make sure to replace the placeholder values with the actual values before running the script.
 
 ## Deployment and Minting
 
-4. Deploy and mint the NFT:
+5. Deploy and mint the NFT:
    ```sh
    node ./scripts/deployAndMint.js
    ```
 
-And should show this result:
+The result should be:
 
 ```sh
-  Starting deploy of contract:  MyNft
+    Starting deploy of contract:  MyNft
     Create Factory MyNft...
     Deploying MyNft...
     Contract deployed!
