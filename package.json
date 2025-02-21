@@ -1,0 +1,21 @@
+{
+  "name": "nftsample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ethersproject/hdnode": "^5.7.0",
+    "@lacchain/gas-model-provider": "^1.2.1",
+    "@openzeppelin/contracts": "^5.2.0",
+    "ethers": "^6.7.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.18"
+  }
+}
