@@ -1,4 +1,4 @@
-# Lacchain NFT Sample
+# LACNet NFT Sample
 
 ## Prerequisites
 
